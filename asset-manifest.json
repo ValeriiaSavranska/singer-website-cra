@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/singer_website/static/css/main.7acaea2f.css",
-    "main.js": "/singer_website/static/js/main.07d3183d.js",
-    "index.html": "/singer_website/index.html",
-    "main.7acaea2f.css.map": "/singer_website/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/singer_website/static/js/main.07d3183d.js.map"
+    "main.css": "/singer-website-cra/static/css/main.7acaea2f.css",
+    "main.js": "/singer-website-cra/static/js/main.07d3183d.js",
+    "index.html": "/singer-website-cra/index.html",
+    "main.7acaea2f.css.map": "/singer-website-cra/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/singer-website-cra/static/js/main.07d3183d.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
