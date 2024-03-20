@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "singer-website-cra",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ValeriiaSavranska.github.io/singer_website/",
+  "homepage": "https://ValeriiaSavranska.github.io/singer-website-cra/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
