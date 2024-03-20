@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/singer_website/static/css/main.7acaea2f.css",
+    "main.js": "/singer_website/static/js/main.07d3183d.js",
+    "index.html": "/singer_website/index.html",
+    "main.7acaea2f.css.map": "/singer_website/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/singer_website/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
