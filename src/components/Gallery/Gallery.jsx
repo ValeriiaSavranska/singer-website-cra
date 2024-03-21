@@ -85,7 +85,9 @@ const data = [
 ];
 
 const Gallery = () => {
-  const [slides, setSlides] = useState([]);
+  const slides = [...data];
+  const lastInd = slides.length - 1;
+  // const [slides, setSlides] = useState(data);
   const [curentSlideInd, setCurentSlideInd] = useState(0);
   const [btnLeftDisabled, settnLeftDisabled] = useState(0);
   const [btnRighttDisabled, setBtnRighttDisabled] = useState(0);
@@ -93,10 +95,6 @@ const Gallery = () => {
   const [orientation, setOrientation] = useState(
     window.innerWidth < window.innerHeight ? 'portrait' : 'landscape'
   );
-
-  setSlides(data);
-
-  const lastInd = slides.length - 1;
 
   (function () {
     var throttle = function (type, name, obj) {
@@ -134,7 +132,7 @@ const Gallery = () => {
     } else if (windowWidth < 768 && curentSlideInd !== lastInd) {
       setBtnRighttDisabled(0);
     }
-  }, [orientation]);
+  }, [orientation, windowWidth, curentSlideInd, lastInd]);
 
   useEffect(
     effect => {
@@ -154,7 +152,7 @@ const Gallery = () => {
         setBtnRighttDisabled(0);
       }
     },
-    [curentSlideInd, slides]
+    [curentSlideInd, lastInd, windowWidth]
   );
 
   return (
