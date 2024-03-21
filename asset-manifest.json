@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/singer-website-cra/static/css/main.7acaea2f.css",
-    "main.js": "/singer-website-cra/static/js/main.07d3183d.js",
+    "main.css": "/singer-website-cra/static/css/main.741e7218.css",
+    "main.js": "/singer-website-cra/static/js/main.a45ed0ad.js",
+    "static/media/free-png.ru-546.png": "/singer-website-cra/static/media/free-png.ru-546.282d42d07e2b164201da.png",
+    "static/media/home-photo-desktop.webp": "/singer-website-cra/static/media/home-photo-desktop.d17d125aef49cf8ff6f8.webp",
+    "static/media/Fairytales-and-Ghost.webp": "/singer-website-cra/static/media/Fairytales-and-Ghost.7103c6ee5996db2666a8.webp",
+    "static/media/home-photo.webp": "/singer-website-cra/static/media/home-photo.cd936feb1e198b075ed2.webp",
+    "static/media/Massenet-Cendrillon.webp": "/singer-website-cra/static/media/Massenet-Cendrillon.9bec5ee8476f814c2371.webp",
+    "static/media/about-photo.webp": "/singer-website-cra/static/media/about-photo.b3b28db58fa00298c242.webp",
+    "static/media/upcoming-events-photo.webp": "/singer-website-cra/static/media/upcoming-events-photo.41577ebf76268975f87a.webp",
+    "static/media/Soprano-soloist.webp": "/singer-website-cra/static/media/Soprano-soloist.6cf33528c93d231b7740.webp",
+    "static/media/pdf-svgrepo-com.svg": "/singer-website-cra/static/media/pdf-svgrepo-com.6a9528b9951d7187008739faae617255.svg",
     "index.html": "/singer-website-cra/index.html",
-    "main.7acaea2f.css.map": "/singer-website-cra/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/singer-website-cra/static/js/main.07d3183d.js.map"
+    "main.741e7218.css.map": "/singer-website-cra/static/css/main.741e7218.css.map",
+    "main.a45ed0ad.js.map": "/singer-website-cra/static/js/main.a45ed0ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.741e7218.css",
+    "static/js/main.a45ed0ad.js"
   ]
 }
