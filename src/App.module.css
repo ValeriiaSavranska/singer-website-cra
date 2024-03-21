@@ -1,0 +1,10 @@
+.wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  padding-bottom: 40px;
+}

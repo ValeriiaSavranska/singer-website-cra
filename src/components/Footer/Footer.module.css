@@ -1,0 +1,56 @@
+.footer {
+  position: relative;
+  margin-top: auto;
+  padding-bottom: 40px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrap {
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.name {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+}
+
+.cvWrap {
+  position: static;
+}
+
+@media screen and (min-width: 768px) {
+  .cvWrap {
+    position: absolute;
+    right: 100px;
+  }
+}
+
+.cv {
+  text-align: center;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; */
+}
+
+.cvImg {
+  padding-bottom: 5px;
+}

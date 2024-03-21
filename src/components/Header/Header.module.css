@@ -1,0 +1,126 @@
+.header {
+  /* padding: 0 10px; */
+}
+.wrap {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 40px 0;
+
+  border-bottom: 1px solid #c5a880;
+}
+
+.name {
+  padding-left: 10px;
+  font-size: 28px;
+  flex-grow: 1;
+  text-align: center;
+}
+@media screen and (min-width: 375px) {
+  .name {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .name {
+    font-size: 46px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .name {
+    padding-left: 0px;
+    font-size: 68px;
+  }
+}
+
+.menuMobileBtn {
+  position: relative;
+  z-index: 15;
+  padding-right: 10px;
+}
+
+.menuMobileBtn svg {
+  fill: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .menuMobileBtn {
+    display: none;
+  }
+}
+
+.menuMobOverlay {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: -100%;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  background-color: #392f2b4e;
+  transition: opacity 800ms;
+}
+
+.menuMobOverlayActive {
+  left: 0;
+  opacity: 1;
+}
+
+.menuMobile {
+  position: fixed;
+  z-index: 10;
+  left: -100%;
+  top: 0;
+  width: 70%;
+  height: 100vh;
+  background-color: #4e382d;
+  overflow-y: auto;
+  transition: left 1s;
+}
+.menuActive {
+  left: -1px;
+}
+.menuListMobile {
+  padding: 80px 40px;
+}
+.menuListMobile li:not(:first-child) {
+  padding-top: 20px;
+}
+.menuListMobile li:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c5a880;
+}
+.menuListMobile a {
+  text-decoration: none;
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .menuMobile {
+    display: none;
+  }
+}
+
+.menuDesktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menuDesktop {
+    display: block;
+    padding-top: 10px;
+    /* margin-bottom: 10px; */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c5a880;
+  }
+}
+
+.menuListDesktop {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menuListDesktop a {
+  text-decoration: none;
+}

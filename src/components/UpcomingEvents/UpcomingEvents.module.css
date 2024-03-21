@@ -1,0 +1,48 @@
+.tumb {
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #c5a880;
+}
+.hero {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.title {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+
+  background-color: #806c51;
+  border-top: 1px solid #c5a880;
+  border-bottom: 1px solid #c5a880;
+}
+@media screen and (min-width: 650px) {
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+.item {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.link {
+  font-size: 14px;
+  line-height: 1.6em;
+}

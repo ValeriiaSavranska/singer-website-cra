@@ -1,0 +1,70 @@
+@media screen and (min-width: 768px) {
+  .home {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.wrap {
+  padding: 0 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap {
+    padding: 0 100px;
+  }
+}
+
+.homeImg {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .homeImg {
+    margin: 0;
+  }
+
+  .picture {
+    flex-shrink: 0;
+    width: 50%;
+  }
+}
+
+.text {
+  line-height: 1.8;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    padding-top: 0px;
+  }
+}
+
+.button {
+  display: block;
+  width: 160px;
+  margin: 0px auto;
+  padding: 12px 20px;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #c5a880;
+  cursor: pointer;
+
+  transition: background-color 250ms;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    margin: 0px;
+  }
+}
+
+.button:hover,
+.button:focus {
+  background-color: #4e382d;
+}
