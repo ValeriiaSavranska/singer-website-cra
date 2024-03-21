@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import { IoIosArrowDropleftCircle } from "react-icons/io";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { useState, useEffect } from 'react';
+import { IoIosArrowDropleftCircle } from 'react-icons/io';
+import { IoIosArrowDroprightCircle } from 'react-icons/io';
 // import singerPhoto1 from "../../images/home-photo.webp";
 // import singerPhoto2 from "../../images/about-photo.webp";
 // import singerPhoto3 from "../../images/Soprano-soloist.webp";
 // import singerPhoto4 from "../../images/Fairytales-and-Ghost.webp";
-import s from "./Gallery.module.css";
+import s from './Gallery.module.css';
 
 const data = [
   // { ind: 0, img: singerPhoto1, text: "Some title" },
@@ -15,85 +15,88 @@ const data = [
   {
     albumId: 1,
     id: 1,
-    title: "accusamus beatae ad facilis cum similique qui sunt",
-    url: "https://via.placeholder.com/600/92c952",
-    thumbnailUrl: "https://via.placeholder.com/150/92c952",
+    title: 'accusamus beatae ad facilis cum similique qui sunt',
+    url: 'https://via.placeholder.com/600/92c952',
+    thumbnailUrl: 'https://via.placeholder.com/150/92c952',
   },
   {
     albumId: 1,
     id: 2,
-    title: "reprehenderit est deserunt velit ipsam",
-    url: "https://via.placeholder.com/600/771796",
-    thumbnailUrl: "https://via.placeholder.com/150/771796",
+    title: 'reprehenderit est deserunt velit ipsam',
+    url: 'https://via.placeholder.com/600/771796',
+    thumbnailUrl: 'https://via.placeholder.com/150/771796',
   },
   {
     albumId: 1,
     id: 3,
-    title: "officia porro iure quia iusto qui ipsa ut modi",
-    url: "https://via.placeholder.com/600/24f355",
-    thumbnailUrl: "https://via.placeholder.com/150/24f355",
+    title: 'officia porro iure quia iusto qui ipsa ut modi',
+    url: 'https://via.placeholder.com/600/24f355',
+    thumbnailUrl: 'https://via.placeholder.com/150/24f355',
   },
   {
     albumId: 1,
     id: 4,
-    title: "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
-    url: "https://via.placeholder.com/600/d32776",
-    thumbnailUrl: "https://via.placeholder.com/150/d32776",
+    title: 'culpa odio esse rerum omnis laboriosam voluptate repudiandae',
+    url: 'https://via.placeholder.com/600/d32776',
+    thumbnailUrl: 'https://via.placeholder.com/150/d32776',
   },
   {
     albumId: 1,
     id: 5,
-    title: "natus nisi omnis corporis facere molestiae rerum in",
-    url: "https://via.placeholder.com/600/f66b97",
-    thumbnailUrl: "https://via.placeholder.com/150/f66b97",
+    title: 'natus nisi omnis corporis facere molestiae rerum in',
+    url: 'https://via.placeholder.com/600/f66b97',
+    thumbnailUrl: 'https://via.placeholder.com/150/f66b97',
   },
   {
     albumId: 1,
     id: 6,
-    title: "accusamus ea aliquid et amet sequi nemo",
-    url: "https://via.placeholder.com/600/56a8c2",
-    thumbnailUrl: "https://via.placeholder.com/150/56a8c2",
+    title: 'accusamus ea aliquid et amet sequi nemo',
+    url: 'https://via.placeholder.com/600/56a8c2',
+    thumbnailUrl: 'https://via.placeholder.com/150/56a8c2',
   },
   {
     albumId: 1,
     id: 7,
-    title: "officia delectus consequatur vero aut veniam explicabo molestias",
-    url: "https://via.placeholder.com/600/b0f7cc",
-    thumbnailUrl: "https://via.placeholder.com/150/b0f7cc",
+    title: 'officia delectus consequatur vero aut veniam explicabo molestias',
+    url: 'https://via.placeholder.com/600/b0f7cc',
+    thumbnailUrl: 'https://via.placeholder.com/150/b0f7cc',
   },
   {
     albumId: 1,
     id: 8,
-    title: "aut porro officiis laborum odit ea laudantium corporis",
-    url: "https://via.placeholder.com/600/54176f",
-    thumbnailUrl: "https://via.placeholder.com/150/54176f",
+    title: 'aut porro officiis laborum odit ea laudantium corporis',
+    url: 'https://via.placeholder.com/600/54176f',
+    thumbnailUrl: 'https://via.placeholder.com/150/54176f',
   },
   {
     albumId: 1,
     id: 9,
-    title: "qui eius qui autem sed",
-    url: "https://via.placeholder.com/600/51aa97",
-    thumbnailUrl: "https://via.placeholder.com/150/51aa97",
+    title: 'qui eius qui autem sed',
+    url: 'https://via.placeholder.com/600/51aa97',
+    thumbnailUrl: 'https://via.placeholder.com/150/51aa97',
   },
   {
     albumId: 1,
     id: 10,
-    title: "beatae et provident et ut vel",
-    url: "https://via.placeholder.com/600/810b14",
-    thumbnailUrl: "https://via.placeholder.com/150/810b14",
+    title: 'beatae et provident et ut vel',
+    url: 'https://via.placeholder.com/600/810b14',
+    thumbnailUrl: 'https://via.placeholder.com/150/810b14',
   },
 ];
 
 const Gallery = () => {
-  const [slides, setSlides] = useState(data);
+  const [slides, setSlides] = useState([]);
   const [curentSlideInd, setCurentSlideInd] = useState(0);
   const [btnLeftDisabled, settnLeftDisabled] = useState(0);
   const [btnRighttDisabled, setBtnRighttDisabled] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [orientation, setOrientation] = useState(
-    window.innerWidth < window.innerHeight ? "portrait" : "landscape"
+    window.innerWidth < window.innerHeight ? 'portrait' : 'landscape'
   );
+
+  setSlides(data);
+
+  const lastInd = slides.length - 1;
 
   (function () {
     var throttle = function (type, name, obj) {
@@ -112,22 +115,20 @@ const Gallery = () => {
       obj.addEventListener(type, func);
     };
 
-    throttle("resize", "optimizedResize");
+    throttle('resize', 'optimizedResize');
   })();
 
-  window.addEventListener("optimizedResize", function () {
+  window.addEventListener('optimizedResize', function () {
     if (window.innerWidth < window.innerHeight) {
-      setOrientation("portrait");
+      setOrientation('portrait');
     } else {
-      setOrientation("landscape");
+      setOrientation('landscape');
     }
 
     setWindowWidth(window.innerWidth);
-    setWindowHeight(window.innerHeight);
   });
 
   useEffect(() => {
-    const lastInd = slides.length - 1;
     if (windowWidth >= 768 && curentSlideInd >= lastInd - 2) {
       setBtnRighttDisabled(1);
     } else if (windowWidth < 768 && curentSlideInd !== lastInd) {
@@ -136,8 +137,7 @@ const Gallery = () => {
   }, [orientation]);
 
   useEffect(
-    (effect) => {
-      const lastInd = slides.length - 1;
+    effect => {
       if (curentSlideInd <= 0) {
         // setCurentSlideInd(lastInd);
         settnLeftDisabled(1);
@@ -166,7 +166,7 @@ const Gallery = () => {
           disabled={btnLeftDisabled}
           className={s.btn}
           type="button"
-          onClick={() => setCurentSlideInd((prevState) => prevState - 1)}
+          onClick={() => setCurentSlideInd(prevState => prevState - 1)}
         >
           <IoIosArrowDropleftCircle size={40} />
         </button>
@@ -174,20 +174,20 @@ const Gallery = () => {
           {data.map((slide, index) => {
             // const { ind, img, text } = slide;
             const { id, title, url } = slide;
-            let position = "nextSlide";
+            let position = 'nextSlide';
             if (index === curentSlideInd) {
-              position = "activeSlide";
+              position = 'activeSlide';
             }
 
             if (
               index === curentSlideInd - 1 ||
               (curentSlideInd === 0 && index === slides.length - 1)
             ) {
-              position = "lastSlide";
+              position = 'lastSlide';
             }
             return (
               <div
-                className={[s.slide, s[position]].join(" ")}
+                className={[s.slide, s[position]].join(' ')}
                 key={id}
                 style={{
                   transform: `translateX(${
@@ -205,7 +205,7 @@ const Gallery = () => {
           disabled={btnRighttDisabled}
           className={s.btn}
           type="button"
-          onClick={() => setCurentSlideInd((prevState) => prevState + 1)}
+          onClick={() => setCurentSlideInd(prevState => prevState + 1)}
         >
           <IoIosArrowDroprightCircle size={40} />
         </button>
