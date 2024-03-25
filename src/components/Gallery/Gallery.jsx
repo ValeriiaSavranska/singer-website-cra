@@ -95,7 +95,7 @@ const Gallery = () => {
   const [orientation, setOrientation] = useState(
     window.innerWidth < window.innerHeight ? 'portrait' : 'landscape'
   );
-  const [isModalShow, setIsModalShow] = useState(0);
+  // const [isModalShow, setIsModalShow] = useState(0);
 
   (function () {
     var throttle = function (type, name, obj) {
