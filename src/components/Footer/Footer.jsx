@@ -1,5 +1,7 @@
-import pdfSvg from "../../images/pdf-svgrepo-com.svg";
-import s from "./Footer.module.css";
+import { Link } from 'react-router-dom';
+import cv from '../../files/cv.pdf';
+import pdfSvg from '../../images/pdf-svgrepo-com.svg';
+import s from './Footer.module.css';
 
 const Footer = () => {
   const date = new Date();
@@ -8,14 +10,14 @@ const Footer = () => {
     <footer className={s.footer}>
       <div className={s.wrap}>
         <div className={s.info}>
-          <p className={s.name}>Victoria Harley</p>
-          <a href=".">www.victoriaharleysoprano.com</a>
+          <p className={s.name}>Singer's Name</p>
+          <Link to="/">website address</Link>
           <p>&#169;{date.getFullYear()} by Valleriia Savranska.</p>
         </div>
         <div className={s.cvWrap}>
           {/* <a href="/images/css_in_ua_image.jpg" download></a> */}
           <a
-            href="https://www.victoriaharleysoprano.com/_files/ugd/143ad0_85ff9a330f94441c8d8a47eb41d4ebbb.pdf"
+            href={cv}
             target="_blank"
             title="CV .pdf"
             rel="noreferrer"

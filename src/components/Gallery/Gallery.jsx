@@ -95,6 +95,7 @@ const Gallery = () => {
   const [orientation, setOrientation] = useState(
     window.innerWidth < window.innerHeight ? 'portrait' : 'landscape'
   );
+  const [isModalShow, setIsModalShow] = useState(0);
 
   (function () {
     var throttle = function (type, name, obj) {
@@ -156,9 +157,9 @@ const Gallery = () => {
   );
 
   return (
-    <div className={s.section}>
-      <h2>Gallery</h2>
-      <p>CURENT SLIDE: {curentSlideInd}</p>
+    <section className={s.section}>
+      <h2 className={s.title}>Gallery</h2>
+      {/* <p>CURENT SLIDE: {curentSlideInd}</p> */}
       <div className={s.wrap}>
         <button
           disabled={btnLeftDisabled}
@@ -194,7 +195,9 @@ const Gallery = () => {
                 }}
               >
                 {/* <p>{ind}</p> */}
-                <img src={url} alt={title} width={280} />
+                <div className={s.imgWrap}>
+                  <img src={url} alt={title} />
+                </div>
               </div>
             );
           })}
@@ -208,7 +211,45 @@ const Gallery = () => {
           <IoIosArrowDroprightCircle size={40} />
         </button>
       </div>
-    </div>
+
+      {/* <div
+        className={
+          isModalShow
+            ? [s.modalBackdrop, s.modalActive].join(' ')
+            : [s.modalBackdrop]
+        }
+      >
+        <div className={s.modal}>
+          <div className={s.wrapImgModal}>
+            <button
+              disabled={btnLeftDisabled}
+              className={[s.btn, s.btnModal, s.btnModalPrev].join(' ')}
+              type="button"
+              onClick={() => setCurentSlideInd(prevState => prevState - 1)}
+            >
+              <IoIosArrowDropleftCircle size={50} />
+            </button>
+            <img
+              className={s.modalImg}
+              src={slides[curentSlideInd].url}
+              alt={slides[curentSlideInd].title}
+            />
+            <button
+              disabled={btnRighttDisabled}
+              className={[s.btn, s.btnModal, s.btnModalNext].join(' ')}
+              type="button"
+              onClick={() => setCurentSlideInd(prevState => prevState + 1)}
+            >
+              <IoIosArrowDroprightCircle size={50} />
+            </button>
+          </div>
+          <p className={s.modalTitle}>{slides[curentSlideInd].title}</p>
+        </div>
+        <button className={s.btnClose} type="button">
+          X
+        </button>
+      </div> */}
+    </section>
   );
 };
 

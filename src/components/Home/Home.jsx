@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import singerPhoto from "../../images/home-photo.webp";
-import singerPhotoDesktop from "../../images/home-photo-desktop.webp";
-import s from "./Home.module.css";
+import { Link } from 'react-router-dom';
+import singerPhoto from '../../images/home-photo-desktop.jpg';
+import singerPhotoDesktop from '../../images/home-photo-desktop.jpg';
+import s from './Home.module.css';
 
 const Home = () => {
   return (
@@ -13,9 +13,10 @@ const Home = () => {
 
       <div className={s.wrap}>
         <p className={s.text}>
-          Soprano Victoria Harley is a 2024 Artist on the Serena Fenwick
-          Programme with British Youth Opera. She is the 2023 recipient of the
-          St Clare Barfield Rosebowl for Operatic Distinction.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+          mollitia error cum, ullam veritatis eum aut esse enim, nostrum veniam
+          laudantium adipisci temporibus doloribus labore delectus impedit
+          commodi consectetur praesentium.
         </p>
         <Link to="/about" className={s.button}>
           Read more
